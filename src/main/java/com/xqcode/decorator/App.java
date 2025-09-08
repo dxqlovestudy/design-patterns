@@ -19,14 +19,14 @@ public class App {
 
     // 简单的小怪
     log.info("一个简单的小怪出现了");
-    SimpleTroll troll = new SimpleTroll();
+    Troll troll = new SimpleTroll();
     troll.attack();
     troll.fleeBattle();
     log.info("小怪的攻击力: {}", troll.getAttackPower());
 
     // 通过装饰器改变小怪的行为
     log.info("一个拿着巨大棍子的小怪出现了");
-    ClubbedTroll clubbedTroll = new ClubbedTroll(troll);
+    Troll clubbedTroll = new ClubbedTroll(troll);
     clubbedTroll.attack();
     clubbedTroll.fleeBattle();
     log.info("小怪的攻击力: {}", clubbedTroll.getAttackPower());
